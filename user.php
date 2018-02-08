@@ -34,6 +34,27 @@ class User
         return false;
     }
 
+    function login($username, $password)
+    {
+        include('users.php');
+
+        if (isset($users[$username]) && $users[$username] == $password) {
+            $loggedIn = true;
+            echo "<p>$username is logged in.</p>";
+        }
+        else {
+            $loggedIn = false;
+            echo '<p>Login error</p>';
+        }
+    }
+
+    function logout()
+    {
+        $username = "";
+        $password = "";
+        $loggedIn = false;
+    }
+
 }//end User class
 
 ?>
