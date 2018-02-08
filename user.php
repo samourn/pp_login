@@ -9,9 +9,9 @@
     class User
     {
         //Declare the class attributes
-        private $username;
-        private $password;
-        private $loggedIn;
+        private $_username;
+        private $_password;
+        private $_loggedIn;
 
         /**
          * User constructor, starts out empty
@@ -19,8 +19,8 @@
          */
         public function __construct()
         {
-            $this->username = "";
-            $this->loggedIn = false;
+            $this->_username = "";
+            $this->_loggedIn = false;
         }
 
         /**
@@ -29,7 +29,7 @@
          */
         function getUsername()
         {
-            return $this->username;
+            return $this->_username;
         }
 
         /**
@@ -38,7 +38,7 @@
          */
         function setUsername($username)
         {
-            $this->username = $username;
+            $this->_username = $username;
         }
 
         /**
@@ -49,7 +49,7 @@
         function setPassword($password)
         {
             if(strlen($password) >= 6) {
-                $this->password = $password;
+                $this->_password = $password;
                 return true;
             }
             return false;
