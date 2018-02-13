@@ -1,5 +1,8 @@
 <?php
 
+    ini_set('display-errors', 1);
+    error_reporting(E_ALL);
+
     /**
      * holds usernames and passwords, logs user in and out
      * @author Antonio Suarez <asuarez2@mail.greenriver.edu>

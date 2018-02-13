@@ -1,7 +1,5 @@
 <?php
 
-include('user.php');
-
     class Admin extends User
     {
         private $_username;
@@ -46,8 +44,8 @@ include('user.php');
          */
         function editUser(User $user, $newUser)
         {
-            if ($accessLevel >= 1) {
-                echo "<p>Editing $user->getUsername()</p>";
+            if ($this->_accessLevel >= 1) {
+                echo "<p>Editing " . $user->getUsername() . "</p>";
                 $user->setUsername($newUser);
             }
         }
